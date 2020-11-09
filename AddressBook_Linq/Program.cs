@@ -14,8 +14,8 @@ namespace AddressBook_Linq
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book");
-            //AddressBookManagement.CreateDataTable();
-            //AddressBookManagement.InsertRowIntotable();
+            AddressBookManagement.CreateDataTable();
+            AddressBookManagement.InsertRowIntotable();
             //AddressBookManagement.DisplayDataTable();
 
             //AddressBookManagement.EditContactInTable("nikhil");
@@ -26,7 +26,7 @@ namespace AddressBook_Linq
             //AddressBookManagement.CountByState();
             //AddressBookManagement.SortedContactsByNameForAgivenState();
             //AddressBookManagement.AddAddressBookNameType();
-            //AddressBookManagement.DisplayDataTable();
+            AddressBookManagement.DisplayDataTable();
         }
     }
 }
