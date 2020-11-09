@@ -25,37 +25,37 @@ namespace AddressBook_Linq
         ///// Creating Data Table 
         ///// UC2
         ///// </summary>
-        //public static void CreateDataTable()
-        //{
-        //    ///adding columns
-        //    table.Columns.Add("FirstName", typeof(string));
-        //    table.Columns.Add("LastName", typeof(string));
-        //    table.Columns.Add("Address", typeof(string));
-        //    table.Columns.Add("City", typeof(string));
-        //    table.Columns.Add("State", typeof(string));
-        //    table.Columns.Add("Zip", typeof(int));
-        //    table.Columns.Add("PhoneNumber", typeof(string));
-        //    table.Columns.Add("EmailId", typeof(string));
-        //    ///adding rows
-        //    table.Rows.Add("nikhil", "yadav", "Street1", "Faridabad", "Haryana", 121001, "9650925666", "nikhil@gmail.com");
-        //    table.Rows.Add("akhil", "yada", "Street2", "Mumbai", "Maharashtra", 878001, "890925666", "akhil@gmail.com");
-        //    table.Rows.Add("riya", "yad", "Street3", "Mumbai", "Maharashtra", 841001, "7412925666", "riya@gmail.com");
-        //    table.Rows.Add("neha", "ya", "Street4", "Paris", "France", 7894551, "4569925666", "neha@gmail.com");
-        //}
-        //public static void DisplayDataTable()
-        //{
-        //    var records = table.AsEnumerable();
-        //    //table.AsEnumerable();
-        //    foreach (var row in records)
-        //    {
-        //        Console.WriteLine("FirstName: " + row.Field<string>("FirstName") + ", LastName: " + row.Field<string>("LastName") + ", Address: " + row.Field<string>("Address") + " , City: " + row.Field<string>("City") + " , State: " + row.Field<string>("State") + ", Zip: " + row.Field<int>("Zip") + " , PhoneNumber: " + row.Field<string>("PhoneNumber") + ", EmailID: " + row.Field<string>("EmailID"));
-        //    }
-        //}
+        public static void CreateDataTable()
+        {
+            ///adding columns
+            table.Columns.Add("FirstName", typeof(string));
+            table.Columns.Add("LastName", typeof(string));
+            table.Columns.Add("Address", typeof(string));
+            table.Columns.Add("City", typeof(string));
+            table.Columns.Add("State", typeof(string));
+            table.Columns.Add("Zip", typeof(int));
+            table.Columns.Add("PhoneNumber", typeof(string));
+            table.Columns.Add("EmailId", typeof(string));
+            ///adding rows
+            table.Rows.Add("nikhil", "yadav", "Street1", "Faridabad", "Haryana", 121001, "9650925666", "nikhil@gmail.com");
+            table.Rows.Add("akhil", "yada", "Street2", "Mumbai", "Maharashtra", 878001, "890925666", "akhil@gmail.com");
+            table.Rows.Add("riya", "yad", "Street3", "Mumbai", "Maharashtra", 841001, "7412925666", "riya@gmail.com");
+            table.Rows.Add("neha", "ya", "Street4", "Paris", "France", 7894551, "4569925666", "neha@gmail.com");
+        }
+        public static void DisplayDataTable()
+        {
+            var records = table.AsEnumerable();
+            //table.AsEnumerable();
+            foreach (var row in records)
+            {
+                Console.WriteLine("FirstName: " + row.Field<string>("FirstName") + ", LastName: " + row.Field<string>("LastName") + ", Address: " + row.Field<string>("Address") + " , City: " + row.Field<string>("City") + " , State: " + row.Field<string>("State") + ", Zip: " + row.Field<int>("Zip") + " , PhoneNumber: " + row.Field<string>("PhoneNumber") + ", EmailID: " + row.Field<string>("EmailID"));
+            }
+        }
         ///// <summary>
         ///// Inserting a Row in DataTable
         ///// UC3
         ///// </summary>
-       
+
 
         //public static void InsertRowIntotable()
         //{
@@ -71,17 +71,22 @@ namespace AddressBook_Linq
         //    table.Rows.Add(inserttable);
 
         //}
-        //public static void EditContactInTable(string editName)
-        //{
-        //    //editName= Console.WriteLine();
-        //    foreach (DataRow dr in table.Rows)
-        //    {
-        //        {
-        //            if (dr["FirstName"] == editName)
-        //                dr["LastName"] = "UpdateYadav";
-        //        }
-        //    }
-        //}
+
+        ///// <summary>
+        ///// Edit a Row in DataTable
+        ///// UC4
+        ///// </summary>
+        public static void EditContactInTable(string editName)
+        {
+            //editName= Console.WriteLine();
+            foreach (DataRow dr in table.Rows)
+            {
+                {
+                    if (dr["FirstName"] == editName)
+                        dr["LastName"] = "UpdateYadav";
+                }
+            }
+        }
 
         //public static void DeleteContactInTable(string deleteName)
         //{
