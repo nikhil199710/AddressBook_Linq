@@ -22,9 +22,9 @@ namespace AddressBook_Linq
             //AddressBookManagement.DeleteContactInTable("akhil");
 
            // AddressBookManagement.DisplayDataTableBelongingToStateOrCity();
-            AddressBookManagement.CountContactInTable("Mumbai");
+            //AddressBookManagement.CountContactInTable("Mumbai");
             //AddressBookManagement.CountByState();
-            //AddressBookManagement.SortedContactsByNameForAgivenState();
+            AddressBookManagement.SortedContactsByNameForAgivenState();
             //AddressBookManagement.AddAddressBookNameType();
             AddressBookManagement.DisplayDataTable();
         }
