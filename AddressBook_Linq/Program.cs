@@ -15,11 +15,11 @@ namespace AddressBook_Linq
         {
             Console.WriteLine("Welcome to Address Book");
             AddressBookManagement.CreateDataTable();
-            AddressBookManagement.InsertRowIntotable();
+            //AddressBookManagement.InsertRowIntotable();
             //AddressBookManagement.DisplayDataTable();
 
             //AddressBookManagement.EditContactInTable("nikhil");
-            //AddressBookManagement.DeleteContactInTable("akhil");
+            AddressBookManagement.DeleteContactInTable("akhil");
 
             //AddressBookManagement.DisplayDataTableBelongingToStateOrCity();
             //AddressBookManagement.CountContactInTable("Mumbai");
