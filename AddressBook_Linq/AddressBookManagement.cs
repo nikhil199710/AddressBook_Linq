@@ -57,20 +57,20 @@ namespace AddressBook_Linq
         ///// </summary>
 
 
-        public static void InsertRowIntotable()
-        {
-            DataRow inserttable = table.NewRow();
-            inserttable[0] = "Sneha";
-            inserttable[1] = "y";
-            inserttable[2] = "street6";
-            inserttable[3] = "ballia";
-            inserttable[4] = "Uttar Pradesh";
-            inserttable[5] = 2185451;
-            inserttable[6] = "7896541238";
-            inserttable[7] = "sneha@gmail.com";
-            table.Rows.Add(inserttable);
+        //public static void InsertRowIntotable()
+        //{
+        //    DataRow inserttable = table.NewRow();
+        //    inserttable[0] = "Sneha";
+        //    inserttable[1] = "y";
+        //    inserttable[2] = "street6";
+        //    inserttable[3] = "ballia";
+        //    inserttable[4] = "Uttar Pradesh";
+        //    inserttable[5] = 2185451;
+        //    inserttable[6] = "7896541238";
+        //    inserttable[7] = "sneha@gmail.com";
+        //    table.Rows.Add(inserttable);
 
-        }
+        //}
         //public static void EditContactInTable(string editName)
         //{
         //    //editName= Console.WriteLine();
@@ -83,16 +83,16 @@ namespace AddressBook_Linq
         //    }
         //}
 
-        //public static void DeleteContactInTable(string deleteName)
-        //{
-        //    for (int i = table.Rows.Count - 1; i >= 0; i--)
-        //    {
-        //        DataRow dr = table.Rows[i];
-        //        if (dr["FirstName"] == deleteName)
-        //            dr.Delete();
-        //    }
-        //    table.AcceptChanges();
-        //}
+        public static void DeleteContactInTable(string deleteName)
+        {
+            for (int i = table.Rows.Count - 1; i >= 0; i--)
+            {
+                DataRow dr = table.Rows[i];
+                if (dr["FirstName"] == deleteName)
+                    dr.Delete();
+            }
+            table.AcceptChanges();
+        }
 
         //public static void DisplayDataTableBelongingToStateOrCity()
         //{
