@@ -127,15 +127,15 @@ namespace AddressBook_Linq
         //    Console.WriteLine("The count for records by state is  is : " + records.Count());
         //}
 
-        //public static void SortedContactsByNameForAgivenState()
-        //{
-        //    var records = table.AsEnumerable().Where(r => r.Field<string>("State") == "Maharashtra").OrderBy(r => r.Field<string>("FirstName")).ThenBy(r => r.Field<string>("LastName"));
-        //    //var records = table.AsEnumerable().Where(a => a.Field<string>("state").Equals("Maharastra")).OrderBy((a=>a.Field<string>("firstName")).thenby(a => a.Field<string>("LastName")));
-        //    foreach (var row in records)
-        //    {
-        //        Console.WriteLine("FirstName: " + row.Field<string>("FirstName") + ", LastName: " + row.Field<string>("LastName") + ", Address: " + row.Field<string>("Address") + " , City: " + row.Field<string>("City") + " , State: " + row.Field<string>("State") + ", Zip: " + row.Field<int>("Zip") + " , PhoneNumber: " + row.Field<string>("PhoneNumber") + ", EmailID: " + row.Field<string>("EmailID"));
-        //    }
-        //}
+        public static void SortedContactsByNameForAgivenState()
+        {
+            var records = table.AsEnumerable().Where(r => r.Field<string>("State") == "Maharashtra").OrderBy(r => r.Field<string>("FirstName")).ThenBy(r => r.Field<string>("LastName"));
+            //var records = table.AsEnumerable().Where(a => a.Field<string>("state").Equals("Maharastra")).OrderBy((a=>a.Field<string>("firstName")).thenby(a => a.Field<string>("LastName")));
+            foreach (var row in records)
+            {
+                Console.WriteLine("FirstName: " + row.Field<string>("FirstName") + ", LastName: " + row.Field<string>("LastName") + ", Address: " + row.Field<string>("Address") + " , City: " + row.Field<string>("City") + " , State: " + row.Field<string>("State") + ", Zip: " + row.Field<int>("Zip") + " , PhoneNumber: " + row.Field<string>("PhoneNumber") + ", EmailID: " + row.Field<string>("EmailID"));
+            }
+        }
 
 
         //public static void AddAddressBookNameType()
