@@ -21,8 +21,8 @@ namespace AddressBook_Linq
             //AddressBookManagement.EditContactInTable("nikhil");
             //AddressBookManagement.DeleteContactInTable("akhil");
 
-            AddressBookManagement.DisplayDataTableBelongingToStateOrCity();
-            //AddressBookManagement.CountContactInTable("Mumbai");
+           // AddressBookManagement.DisplayDataTableBelongingToStateOrCity();
+            AddressBookManagement.CountContactInTable("Mumbai");
             //AddressBookManagement.CountByState();
             //AddressBookManagement.SortedContactsByNameForAgivenState();
             //AddressBookManagement.AddAddressBookNameType();

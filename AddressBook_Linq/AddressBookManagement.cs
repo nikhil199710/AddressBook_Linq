@@ -94,31 +94,31 @@ namespace AddressBook_Linq
         //    table.AcceptChanges();
         //}
 
-        public static void DisplayDataTableBelongingToStateOrCity()
-        {
-            string state = Console.ReadLine();
-            string city = Console.ReadLine();
-            foreach (DataRow dr in table.Rows)
-            {
-                {
-                    if ((dr["City"] == city) || (dr["State"] == state))
-                        Console.WriteLine("FirstName: " + dr.Field<string>("FirstName") + ", LastName: " + dr.Field<string>("LastName") + ", Address: " + dr.Field<string>("Address") + " , City: " + dr.Field<string>("City") + " , State: " + dr.Field<string>("State") + ", Zip: " + dr.Field<int>("Zip") + " , PhoneNumber: " + dr.Field<string>("PhoneNumber") + ", EmailID: " + dr.Field<string>("EmailID"));
-                }
-            }
-        }
-        //public static void CountContactInTable(string city)
+        //public static void DisplayDataTableBelongingToStateOrCity()
         //{
-        //    int count = 0;
-        //    //editName= Console.WriteLine();
+        //    string state = Console.ReadLine();
+        //    string city = Console.ReadLine();
         //    foreach (DataRow dr in table.Rows)
         //    {
         //        {
-        //            if (dr["City"] == city)
-        //                count++;
+        //            if ((dr["City"] == city) || (dr["State"] == state))
+        //                Console.WriteLine("FirstName: " + dr.Field<string>("FirstName") + ", LastName: " + dr.Field<string>("LastName") + ", Address: " + dr.Field<string>("Address") + " , City: " + dr.Field<string>("City") + " , State: " + dr.Field<string>("State") + ", Zip: " + dr.Field<int>("Zip") + " , PhoneNumber: " + dr.Field<string>("PhoneNumber") + ", EmailID: " + dr.Field<string>("EmailID"));
         //        }
         //    }
-        //    Console.WriteLine("Count:" + count);
         //}
+        public static void CountContactInTable(string city)
+        {
+            int count = 0;
+            //editName= Console.WriteLine();
+            foreach (DataRow dr in table.Rows)
+            {
+                {
+                    if (dr["City"] == city)
+                        count++;
+                }
+            }
+            Console.WriteLine("Count:" + count);
+        }
 
         ////Facing_Error|
         //public static void CountByState()
