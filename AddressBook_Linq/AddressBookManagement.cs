@@ -83,29 +83,29 @@ namespace AddressBook_Linq
         //    }
         //}
 
-        public static void DeleteContactInTable(string deleteName)
-        {
-            for (int i = table.Rows.Count - 1; i >= 0; i--)
-            {
-                DataRow dr = table.Rows[i];
-                if (dr["FirstName"] == deleteName)
-                    dr.Delete();
-            }
-            table.AcceptChanges();
-        }
-
-        //public static void DisplayDataTableBelongingToStateOrCity()
+        //public static void DeleteContactInTable(string deleteName)
         //{
-        //    string state = Console.ReadLine();
-        //    string city = Console.ReadLine();
-        //    foreach (DataRow dr in table.Rows)
+        //    for (int i = table.Rows.Count - 1; i >= 0; i--)
         //    {
-        //        {
-        //            if ((dr["City"] == city) || (dr["State"] == state))
-        //                Console.WriteLine("FirstName: " + dr.Field<string>("FirstName") + ", LastName: " + dr.Field<string>("LastName") + ", Address: " + dr.Field<string>("Address") + " , City: " + dr.Field<string>("City") + " , State: " + dr.Field<string>("State") + ", Zip: " + dr.Field<int>("Zip") + " , PhoneNumber: " + dr.Field<string>("PhoneNumber") + ", EmailID: " + dr.Field<string>("EmailID"));
-        //        }
+        //        DataRow dr = table.Rows[i];
+        //        if (dr["FirstName"] == deleteName)
+        //            dr.Delete();
         //    }
+        //    table.AcceptChanges();
         //}
+
+        public static void DisplayDataTableBelongingToStateOrCity()
+        {
+            string state = Console.ReadLine();
+            string city = Console.ReadLine();
+            foreach (DataRow dr in table.Rows)
+            {
+                {
+                    if ((dr["City"] == city) || (dr["State"] == state))
+                        Console.WriteLine("FirstName: " + dr.Field<string>("FirstName") + ", LastName: " + dr.Field<string>("LastName") + ", Address: " + dr.Field<string>("Address") + " , City: " + dr.Field<string>("City") + " , State: " + dr.Field<string>("State") + ", Zip: " + dr.Field<int>("Zip") + " , PhoneNumber: " + dr.Field<string>("PhoneNumber") + ", EmailID: " + dr.Field<string>("EmailID"));
+                }
+            }
+        }
         //public static void CountContactInTable(string city)
         //{
         //    int count = 0;
