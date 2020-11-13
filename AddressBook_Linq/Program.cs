@@ -21,12 +21,17 @@ namespace AddressBook_Linq
             //AddressBookManagement.EditContactInTable("nikhil");
             //AddressBookManagement.DeleteContactInTable("akhil");
 
-           // AddressBookManagement.DisplayDataTableBelongingToStateOrCity();
+            // AddressBookManagement.DisplayDataTableBelongingToStateOrCity();
             //AddressBookManagement.CountContactInTable("Mumbai");
             //AddressBookManagement.CountByState();
-            AddressBookManagement.SortedContactsByNameForAgivenState();
+            //AddressBookManagement.SortedContactsByNameForAgivenState();
             //AddressBookManagement.AddAddressBookNameType();
-            AddressBookManagement.DisplayDataTable();
+            //AddressBookManagement.DisplayDataTable();
+            
+            
+            // UC 9 Add addressbook name and type
+            Console.WriteLine("\nAdd Address Book name and type");
+            AddressBookManagement.AddAddressBookNameType();
         }
     }
 }

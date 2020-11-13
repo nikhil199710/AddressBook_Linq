@@ -138,23 +138,26 @@ namespace AddressBook_Linq
         }
 
 
-        //public static void AddAddressBookNameType()
-        //{
-        //    DataColumn column;
-        //    column = new DataColumn();
-        //    column.DataType = System.Type.GetType("System.String");
-        //    column.ColumnName = "addressBookName";
-        //    column.AllowDBNull = false;
-        //    column.DefaultValue = "Home";
-        //    table.Columns.Add(column);
+        /// <summary>
+        /// UC 9 Add address book name and type
+        /// </summary>
+        public static void AddAddressBookNameType()
+        {
+            DataColumn column;
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "addressBookName";
+            column.AllowDBNull = false;
+            column.DefaultValue = "Home";
+            table.Columns.Add(column);
 
-        //    column = new DataColumn();
-        //    column.DataType = System.Type.GetType("System.String");
-        //    column.ColumnName = "type";
-        //    column.AllowDBNull = false;
-        //    column.DefaultValue = "Friend";
-        //    table.Columns.Add(column);
-        //}
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "type";
+            column.AllowDBNull = false;
+            column.DefaultValue = "Friend";
+            table.Columns.Add(column);
+        }
     }
 }
 
