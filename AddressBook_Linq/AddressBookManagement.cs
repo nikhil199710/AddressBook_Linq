@@ -158,6 +158,22 @@ namespace AddressBook_Linq
             column.DefaultValue = "Friend";
             table.Columns.Add(column);
         }
+
+        /// <summary>
+        /// UC 10 Get Count by type
+        /// </summary>
+        /// <param name="type"></param>
+        public static void GetCountByType()
+        {
+            var element = from contact in table.AsEnumerable()
+                          group contact by contact.Field<string>("type") into g
+                          select new
+                          {
+                              typename = g.Key,
+                              Count = g.Count()
+                          };
+            element.ToList().ForEach(ele => Console.WriteLine($"type : {ele.typename} \t Count = {ele.Count}"));
+        }
     }
 }
 
