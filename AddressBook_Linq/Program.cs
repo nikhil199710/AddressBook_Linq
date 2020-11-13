@@ -32,6 +32,10 @@ namespace AddressBook_Linq
             // UC 9 Add addressbook name and type
             Console.WriteLine("\nAdd Address Book name and type");
             AddressBookManagement.AddAddressBookNameType();
+
+            // UC 10 Get Count by type
+            Console.WriteLine("\nCount by type");
+            AddressBookManagement.GetCountByType();
         }
     }
 }
